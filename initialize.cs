@@ -64,7 +64,7 @@ namespace AetherLauncher
         public static string 启动路径="";
         public static string 命令列表="";
         public static string 路径状态="0";
-        public static string pythonPath;
+        public static string pythonPath = "";
         public static string gitPath;
         public static string 相册图片数量;
 
@@ -79,11 +79,21 @@ namespace AetherLauncher
 
             }
         }
+        public static void 选择Python所在文件夹()
+        {
+            FolderBrowserDialog folder = new FolderBrowserDialog();
+            folder.Description = "请选择Python所在目录，要求3.10.x";
+            if (folder.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                pythonPath = folder.SelectedPath;
+                File.WriteAllText(@"C:\aetherlaunther\pythonpath.txt", pythonPath);
+
+            }
+        }
         public static void 获取程序同目录路径()
         {
              // 获取程序所在目录
                 string 程序所在目录 = Directory.GetCurrentDirectory();
-            pythonPath = 程序所在目录 + "/python/python.exe";
             gitPath = Environment.GetEnvironmentVariable("ProgrameFiles")+@"\Git\bin";
 
 
@@ -119,6 +129,19 @@ namespace AetherLauncher
                 
                 
             }
+
+           
+        }
+            public  static void CheckPythonPathFile()
+        {
+            string filePath = @"C:\aetherlaunther\pythonpath.txt";
+            if (File.Exists(filePath))
+            {
+                // 如果文件存在，读取其中的内容到startpath全局变量中
+                pythonPath = File.ReadAllText(filePath);
+                
+    }
+   
 
            
         }

@@ -5,57 +5,57 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AetherLauncher.Frames"
       mc:Ignorable="d" 
-      d:DesignHeight="740" d:DesignWidth="1350"
+      d:DesignHeight="562" d:DesignWidth="1048"
       Title="Page2" Foreground="{x:Null}">
 
     <Grid Margin="0,0,0,0">
-      
-        <Canvas Margin="0,0,0,670" Background="#4C444444" Visibility="Hidden"/>
+
+        <!--<Canvas Margin="0,0,0,523" Background="#FF071C2B" Height="40"/>-->
 
 
 
 
         <ContentControl x:Name="LauncherPage"  Margin="0,0,0,0"/>
-        
-        <StackPanel Margin="75,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal" Visibility="Hidden" >
-            <Canvas x:Name="Dashboard按钮" Height="45" Width="200" Margin="0,5,0,5">
-                <Border x:Name="参数管理选项卡" CornerRadius="25" BorderThickness="1" Height="45" Width="200" Background="#3FFFFFFF" MouseDown="参数管理选项卡_MouseDown">
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal" Visibility="Hidden" >
+            <Canvas x:Name="Dashboard按钮" Width="150" Margin="0,5,0,5">
+                <Border x:Name="参数管理选项卡" CornerRadius="15" BorderThickness="1" Height="30" Width="150" Background="#3FFFFFFF" MouseDown="参数管理选项卡_MouseDown">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock TextWrapping="Wrap" Foreground="White" Text="&#xE10F;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
-                        <TextBlock TextWrapping="Wrap" Foreground="White" Text="参数管理" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="25,0,0,0"/>
+                        <TextBlock TextWrapping="Wrap" Foreground="White" Text="参数管理" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Margin="5,0,0,0"/>
                     </StackPanel>
                 </Border>
             </Canvas>
 
-            <Canvas x:Name="DataPage按钮" Height="45" Width="200" Margin="0,5,0,5">
-                <Border x:Name="版本管理选项卡" CornerRadius="25" BorderThickness="1" Height="45" Width="200" Background="#3FFFFFFF" MouseDown="版本管理选项卡_MouseDown">
+            <Canvas x:Name="DataPage按钮" Width="150" Margin="0,5,0,5">
+                <Border x:Name="版本管理选项卡" CornerRadius="15" BorderThickness="1" Height="30" Width="150" Background="#3FFFFFFF" MouseDown="版本管理选项卡_MouseDown">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock TextWrapping="Wrap" Foreground="White" Text="&#xE896;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
-                        <TextBlock TextWrapping="Wrap" Foreground="White" Text="版本管理" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="25,0,0,0"/>
+                        <TextBlock TextWrapping="Wrap" Foreground="White" Text="版本管理" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Margin="5,0,0,0"/>
                     </StackPanel>
                 </Border>
             </Canvas>
-            <Canvas x:Name="ModelsManger按钮" Height="45" Width="200" Margin="0,5,0,5">
-                <Border x:Name="模型管理选项卡" CornerRadius="25" BorderThickness="1" Height="45" Width="200" Background="#3FFFFFFF" MouseDown="模型管理选项卡_MouseDown">
+            <Canvas x:Name="ModelsManger按钮" Width="150" Margin="0,5,0,5">
+                <Border x:Name="模型管理选项卡" CornerRadius="15" BorderThickness="1" Height="30" Width="149.6" Background="#3FFFFFFF" MouseDown="模型管理选项卡_MouseDown">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock TextWrapping="Wrap" Foreground="White" Text="&#xF0B4;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
-                        <TextBlock TextWrapping="Wrap" Foreground="White" Text="模型管理" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="25,0,0,0"/>
+                        <TextBlock TextWrapping="Wrap" Foreground="White" Text="模型管理" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Margin="5,0,0,0"/>
                     </StackPanel>
                 </Border>
             </Canvas>
-            <Canvas x:Name="extensions按钮" Height="45" Width="200" Margin="0,5,0,5">
-                <Border x:Name="扩展管理选项卡" CornerRadius="25" BorderThickness="1" Height="45" Width="200" Background="#3FFFFFFF" MouseDown="扩展管理选项卡_MouseDown">
+            <Canvas x:Name="extensions按钮" Width="150" Margin="0,5,0,5">
+                <Border x:Name="扩展管理选项卡" CornerRadius="15" BorderThickness="1" Height="30" Width="150" Background="#3FFFFFFF" MouseDown="扩展管理选项卡_MouseDown">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock TextWrapping="Wrap" Foreground="White" Text="&#xE7F1;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
-                        <TextBlock TextWrapping="Wrap" Foreground="White" Text="扩展管理" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="25,0,0,0"/>
+                        <TextBlock TextWrapping="Wrap" Foreground="White" Text="扩展管理" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Margin="5,0,0,0"/>
                     </StackPanel>
                 </Border>
             </Canvas>
-            <Canvas x:Name="env管理按钮" Height="45" Width="200" Margin="0,5,0,5">
-                <Border x:Name="环境管理选项卡" CornerRadius="25" BorderThickness="1" Height="45" Width="280" Background="#3FFFFFFF" MouseDown="环境管理选项卡_MouseDown">
+            <Canvas x:Name="env管理按钮" Width="200" Margin="0,5,0,5">
+                <Border x:Name="环境管理选项卡" CornerRadius="15" BorderThickness="1" Height="30" Width="243" Background="#3FFFFFFF" MouseDown="环境管理选项卡_MouseDown" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock TextWrapping="Wrap" Foreground="White" Text="&#xE909;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
-                        <TextBlock TextWrapping="Wrap" Foreground="White" Text="环境与本地资源管理" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="25,0,0,0"/>
+                        <TextBlock TextWrapping="Wrap" Foreground="White" Text="环境与本地资源管理" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Margin="5,0,0,0"/>
                     </StackPanel>
                 </Border>
             </Canvas>
@@ -76,11 +76,11 @@
         <!--<ComboBox x:Name="显卡选择列表" >
 
             </ComboBox>-->
-        
 
 
 
-            <!--<Border x:Name="设置webui使用硬件"  CornerRadius="10"  BorderBrush="White" BorderThickness="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Width="458" Height="50" Canvas.Left="10" Canvas.Top="7"  >
+
+        <!--<Border x:Name="设置webui使用硬件"  CornerRadius="10"  BorderBrush="White" BorderThickness="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Width="458" Height="50" Canvas.Left="10" Canvas.Top="7"  >
                 <TextBlock  Foreground="White"  Text="选择用于计算的硬件" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center" Width="395" Margin="32,0,0,0" FontSize="20" />
             </Border>
             <Border x:Name="设置性能优化器"  CornerRadius="10"  BorderBrush="White" BorderThickness="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Width="458" Height="50" Canvas.Left="480" Canvas.Top="7"  >
@@ -111,7 +111,7 @@
 
 
 
-            <!--<ScrollViewer x:Name="命令列表滚动" Height="155" Width="475"  ScrollViewer.VerticalScrollBarVisibility="Hidden" Canvas.Top="585" Canvas.Left="0" ScrollChanged="命令列表滚动_ScrollChanged" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <!--<ScrollViewer x:Name="命令列表滚动" Height="155" Width="475"  ScrollViewer.VerticalScrollBarVisibility="Hidden" Canvas.Top="585" Canvas.Left="0" ScrollChanged="命令列表滚动_ScrollChanged" HorizontalAlignment="Center" VerticalAlignment="Top">
 
                 <ItemsControl x:Name="指令列表" ItemsSource="{Binding list1}">
                     <ItemsControl.ItemTemplate >

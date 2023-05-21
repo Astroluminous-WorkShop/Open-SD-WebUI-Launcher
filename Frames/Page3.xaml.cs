@@ -24,7 +24,7 @@ namespace AetherLauncher.Frames
         public Page3()
         {
             InitializeComponent();
-            webView2.ZoomFactor = 0.85;
+            webView2.ZoomFactor = 0.5;
         }
 
         private void webView2_PreviewMouseRightButtonDown(object sender, MouseButtonEventArgs e)

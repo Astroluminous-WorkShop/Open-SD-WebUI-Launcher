@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:AetherLauncher"
       xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
       mc:Ignorable="d" 
-      d:DesignHeight="740" d:DesignWidth="1350"
+      d:DesignHeight="562" d:DesignWidth="1048"
       
       Title="Page1">
     <Page.Resources>
@@ -45,21 +45,17 @@
 
         <Grid>
 
-            <StackPanel Width="1350"  >
+            <StackPanel Width="1048"  >
                 <!--<wv2:WebView2 Width="1350" Height="450" Name="webView2" ScrollViewer.VerticalScrollBarVisibility="Hidden" 
                   Source="http://phantom.kromiose.top/"
    />-->
-                <Canvas Height="410" MouseEnter="Canvas_MouseEnter" MouseLeave="Canvas_MouseLeave">
-                    <Border x:Name="Can0" CornerRadius="20" BorderThickness="1" Height="410" Margin="5,0,5,5" VerticalAlignment="Top" Width="1340">
+                <Canvas Height="410" Width="1048" HorizontalAlignment="Left">
+                    <Border x:Name="Can0" CornerRadius="0
+                            " BorderThickness="1" Height="411" VerticalAlignment="Top" Width="1048" HorizontalAlignment="Center">
                         <Border.Background>
                             <ImageBrush ImageSource="/Frames/lablepng.png" Stretch="UniformToFill"/>
                         </Border.Background>
-                        <Canvas>
-                            <TextBlock Canvas.Left="23" TextWrapping="Wrap" Text="幻灵AI绘画盒子" Canvas.Top="127" Foreground="#CCFFFFFF" FontSize="64"/>
-                            <TextBlock Canvas.Left="25" TextWrapping="Wrap" Text="一阶段公测  0批次 预览版" Canvas.Top="12" Foreground="#CCFFFFFF" FontSize="24" FontFamily="Yu Gothic UI Semibold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                            <TextBlock Canvas.Left="23" TextWrapping="Wrap" Text="在艺术的世界里越过青空云海    在AI的指引下梦想无限澎湃" Canvas.Top="218" Foreground="#CCFFFFFF" FontSize="36" FontFamily="Yu Gothic UI Semibold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-
-                        </Canvas>
+                        <Canvas/>
 
                     </Border>
                     <Border x:Name="Can1" CornerRadius="20" BorderThickness="1" Height="410" Margin="5,0,5,5" VerticalAlignment="Top" Width="1340" MouseDown="Can1_MouseDown" Visibility="Hidden">
@@ -74,108 +70,102 @@
 
 
                 </Canvas>
-                <Border CornerRadius="20" BorderThickness="1" Height="318" Background="#19FFFFFF" Margin="5,5,5,5">
+                <Border CornerRadius="0" BorderThickness="1" Height="152" Background="#9913354F" >
 
                     <Canvas>
 
-                        <StackPanel Orientation="Horizontal" Canvas.Left="50" Canvas.Top="-136" HorizontalAlignment="Left">
-                            <Border x:Name="打开WebUI文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="15" BorderThickness="1"  Width="190" Height="220" MouseDown="打开WebUI文件夹_MouseDown">
+                        <StackPanel Orientation="Horizontal" Canvas.Left="9" Canvas.Top="-126" HorizontalAlignment="Left" VerticalAlignment="Top" Width="679" Height="118">
+                            <Border x:Name="打开WebUI文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="15" BorderThickness="1"  Width="155" Height="120" MouseDown="打开WebUI文件夹_MouseDown">
                                 <Canvas>
-                                    <TextBlock Text="&#xF89A;" FontFamily="Segoe MDL2 Assets" Width="64" Height="64" Margin="20,20,0,0" FontSize="64" Foreground="#FF87FF83"></TextBlock>
-                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="35" Height="35" Margin="140,175,0,0" FontSize="35" Foreground="#FF87FF83"></TextBlock>
+                                    <TextBlock Text="&#xF89A;" FontFamily="Segoe MDL2 Assets" Width="64" Height="64" Margin="10,10,0,0" FontSize="48" Foreground="#FF87FF83"></TextBlock>
+                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="24" Height="24" FontSize="24" Foreground="#FF87FF83" Canvas.Left="122" Canvas.Top="90"/>
 
-                                    <TextBlock Text="打开WebUI文件夹" FontSize="22" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="3" Canvas.Top="103"/>
-                                    <TextBlock Text="轻松管理WebUI文件" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="7" Canvas.Top="137"/>
+                                    <TextBlock Text="打开WebUI文件夹" FontSize="18" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="60" Width="152"/>
+                                    <TextBlock Text="轻松管理WebUI文件" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="7" Canvas.Top="80"/>
                                 </Canvas>
                             </Border>
-                            <Border x:Name="打开文生图文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="15" BorderThickness="1"  Width="190" Height="220" HorizontalAlignment="Left" Margin="20,0,0,0" MouseDown="打开文生图文件夹_MouseDown">
+                            <Border x:Name="打开文生图文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="15" BorderThickness="1"  Width="155" Height="120" HorizontalAlignment="Left" Margin="10,0,0,0" MouseDown="打开文生图文件夹_MouseDown">
                                 <Canvas>
-                                    <TextBlock Text="&#xEB9F;" FontFamily="Segoe MDL2 Assets" Width="64" Height="64" Margin="20,20,0,0" FontSize="64" Foreground="#FF83FFF1"></TextBlock>
-                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="35" Height="35" Margin="140,175,0,0" FontSize="35" Foreground="#FF83FFF1"></TextBlock>
-                                    <TextBlock Text="打开文生图文件夹" FontSize="22" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="3" Canvas.Top="103"/>
-                                    <TextBlock Text="text to image(文生图) &#x0A;生成的图片文件" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="7" Canvas.Top="137">
-
-                                    </TextBlock>
+                                    <TextBlock Text="&#xEB9F;" FontFamily="Segoe MDL2 Assets" Width="64" Height="64" Margin="10,10,0,0" FontSize="48" Foreground="#FF83FFF1"></TextBlock>
+                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Margin="122,90,0,0" FontSize="24" Foreground="#FF83FFF1"/>
+                                    <TextBlock Text="打开文生图文件夹" FontSize="18" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="3" Canvas.Top="60"/>
+                                    <TextBlock Text="text to image(文生图) &#x0A;生成的图片文件" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="7" Canvas.Top="80"/>
                                 </Canvas>
                             </Border>
-                            <Border x:Name="打开图生图文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="15" BorderThickness="1"  Width="190" Height="220" HorizontalAlignment="Left" Margin="20,0,0,0" MouseDown="打开图生图文件夹_MouseDown">
+                            <Border x:Name="打开图生图文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="15" BorderThickness="1"  Width="155" Height="120" HorizontalAlignment="Left" Margin="10,0,0,0" MouseDown="打开图生图文件夹_MouseDown">
                                 <Canvas>
-                                    <TextBlock Text="&#xEB9F;" FontFamily="Segoe MDL2 Assets" Width="64" Height="64" Margin="20,20,0,0" FontSize="64" Foreground="#FFFFE983"></TextBlock>
-                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="35" Height="35" Margin="140,175,0,0" FontSize="35" Foreground="#FFFFE983"></TextBlock>
-                                    <TextBlock Text="打开图生图文件夹" FontSize="22" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="3" Canvas.Top="103"/>
-                                    <TextBlock Text="image to image(文生图) &#x0A;生成的图片文件" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="7" Canvas.Top="137">
-
-                                    </TextBlock>
+                                    <TextBlock Text="&#xEB9F;" FontFamily="Segoe MDL2 Assets" Width="64" Height="64" Margin="10,10,0,0" FontSize="48" Foreground="#FFFFE983"></TextBlock>
+                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="35" Height="35" Margin="122,90,0,0" FontSize="24" Foreground="#FFFFE983"></TextBlock>
+                                    <TextBlock Text="打开图生图文件夹" FontSize="18" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="3" Canvas.Top="60"/>
+                                    <TextBlock Text="image to image(文生图) &#x0A;生成的图片文件" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="7" Canvas.Top="80"/>
                                 </Canvas>
                             </Border>
-                            <Border x:Name="统计生成图片数量"   Style="{DynamicResource 按钮容器样式}" CornerRadius="15" BorderThickness="1"  Width="190" Height="220" HorizontalAlignment="Left" Margin="20,0,0,0" MouseDown="统计生成图片数量_MouseDown">
+                            <Border x:Name="统计生成图片数量"   Style="{DynamicResource 按钮容器样式}" CornerRadius="15" BorderThickness="1"  Width="155" Height="120" HorizontalAlignment="Left" Margin="20,0,0,0" MouseDown="统计生成图片数量_MouseDown">
                                 <Canvas>
-                                    <TextBlock Text="&#xEB9F;" FontFamily="Segoe MDL2 Assets" Width="64" Height="64" Margin="20,20,0,0" FontSize="64" Foreground="#FFFF6363"></TextBlock>
-                                    <TextBlock Text="&#xE1CD;" FontFamily="Segoe MDL2 Assets" Width="30" Height="30" Margin="140,175,0,0" FontSize="30" Foreground="#FFFF6363"></TextBlock>
-                                    <TextBlock Text="统计生成图片数量" FontSize="22" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="3" Canvas.Top="103"/>
-                                    <TextBlock x:Name="图片数量展示" FontSize="20" Foreground="#FFFEFF8D" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="8" Canvas.Top="81" Width="168" TextAlignment="Center" FontWeight="Bold" FontFamily="Alimama ShuHeiTi Bold"/>
-                                    <TextBlock Text="统计WebUI生成的图片数量 &#x0A;点击刷新统计数据" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="7" Canvas.Top="137">
-
-                                    </TextBlock>
+                                    <TextBlock Text="&#xEB9F;" FontFamily="Segoe MDL2 Assets" Margin="10,10,0,0" FontSize="36" Foreground="#FFFF6363"/>
+                                    <TextBlock Text="&#xE1CD;" FontFamily="Segoe MDL2 Assets" Width="30" Height="30" Margin="122,94,0,0" FontSize="20" Foreground="#FFFF6363" FontWeight="Bold"></TextBlock>
+                                    <TextBlock Text="统计生成图片数量" FontSize="18" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="3" Canvas.Top="60"/>
+                                    <TextBlock x:Name="图片数量展示" Foreground="#FFFEFF8D" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="7" Canvas.Top="43" Width="140" TextAlignment="Center" FontWeight="Bold" FontFamily="Alimama ShuHeiTi Bold" FontSize="16" Height="20"/>
+                                    <TextBlock Text="点击刷新统计数据" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFD6D6D6" Canvas.Left="3" Canvas.Top="80" Width="155"/>
                                 </Canvas>
                             </Border>
 
                         </StackPanel>
-                        <StackPanel Margin="50,90,0,0" Orientation="Horizontal"  >
-                            <Border x:Name="打开SD模型文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="13" BorderThickness="1"  Width="400" Height="80" MouseDown="打开SD模型文件夹_MouseDown">
+                        <StackPanel Margin="10,5,0,0" Orientation="Horizontal"  >
+                            <Border x:Name="打开SD模型文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="13" BorderThickness="1"  Width="335" Height="70" MouseDown="打开SD模型文件夹_MouseDown">
                                 <Canvas>
-                                    <TextBlock Text="&#xEC50;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" FontSize="45" Foreground="#FFCDE2F4" Canvas.Left="21" Canvas.Top="16"/>
-                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="30" Height="30" FontSize="30" Foreground="#FFCDE2F4" Canvas.Left="355" Canvas.Top="26"/>
+                                    <TextBlock Text="&#xEC50;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" FontSize="45" Foreground="#FFCDE2F4" Canvas.Left="15" Canvas.Top="12"/>
+                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="30" Height="30" FontSize="30" Foreground="#FFCDE2F4" Canvas.Left="290" Canvas.Top="20"/>
 
-                                    <TextBlock Text="打开StableDiffusion模型文件夹" FontSize="18.5" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="80" Canvas.Top="16" Width="271" Height="23"/>
-                                    <TextBlock Text="StableDiffusion模型也称SD模型" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="80" Canvas.Top="41"/>
+                                    <TextBlock Text="打开StableDiffusion模型文件夹" FontSize="15" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="69" Canvas.Top="16" Width="214" Height="23"/>
+                                    <TextBlock Text="StableDiffusion模型也称SD模型" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="80" Canvas.Top="41"/>
                                 </Canvas>
                             </Border>
-                            <Border x:Name="打开lora模型文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="13" BorderThickness="1"  Width="400" Height="80" Margin="20,0,0,0" MouseDown="打开lora模型文件夹_MouseDown">
+                            <Border x:Name="打开lora模型文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="13" BorderThickness="1"  Width="335" Height="70" Margin="10,0,0,0" MouseDown="打开lora模型文件夹_MouseDown">
                                 <Canvas>
-                                    <TextBlock Text="&#xEC50;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" FontSize="45" Foreground="#FF8DFF99" Canvas.Left="21" Canvas.Top="16"/>
-                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="30" Height="30" FontSize="30" Foreground="#FF8DFF99" Canvas.Left="355" Canvas.Top="26"/>
+                                    <TextBlock Text="&#xEC50;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" FontSize="45" Foreground="#FF8DFF99" Canvas.Left="15" Canvas.Top="12"/>
+                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="30" Height="30" FontSize="30" Foreground="#FF8DFF99" Canvas.Left="290" Canvas.Top="20"/>
 
-                                    <TextBlock Text="打开LoRA|LoHa...模型文件夹" FontSize="18.5" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="82" Canvas.Top="16" Width="262" Height="23"/>
-                                    <TextBlock Text="一般Lora模型的使用需要依赖SD模型" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="80" Canvas.Top="41"/>
+                                    <TextBlock Text="打开LoRA|LoHa...模型文件夹" FontSize="16" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="68" Canvas.Top="16" Width="216" Height="23"/>
+                                    <TextBlock Text="一般Lora模型的使用需要依赖SD模型" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFD6D6D6" Canvas.Left="76" Canvas.Top="41" Width="201"/>
                                 </Canvas>
                             </Border>
-                            <Border x:Name="打开VAE模型文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="13" BorderThickness="1"  Width="400" Height="80" Margin="20,0,0,0" MouseDown="打开VAE模型文件夹_MouseDown">
+                            <Border x:Name="打开VAE模型文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="13" BorderThickness="1"  Width="335" Height="70" Margin="10,0,0,0" MouseDown="打开VAE模型文件夹_MouseDown">
                                 <Canvas>
-                                    <TextBlock Text="&#xEC50;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" FontSize="45" Foreground="#FFFFE59D" Canvas.Left="21" Canvas.Top="16"/>
-                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="30" Height="30" FontSize="30" Foreground="#FFFFE59D" Canvas.Left="355" Canvas.Top="26"/>
+                                    <TextBlock Text="&#xEC50;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" FontSize="45" Foreground="#FFFFE59D" Canvas.Left="15" Canvas.Top="12"/>
+                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="30" Height="30" FontSize="30" Foreground="#FFFFE59D" Canvas.Left="290" Canvas.Top="20"/>
 
-                                    <TextBlock Text="打开VAE模型文件夹" FontSize="18.5" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="82" Canvas.Top="16" Width="262" Height="23"/>
-                                    <TextBlock Text="VAE变分自动编码器同样重要" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="80" Canvas.Top="41"/>
+                                    <TextBlock Text="打开VAE模型文件夹" FontSize="16" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="82" Canvas.Top="16" Width="183" Height="23"/>
+                                    <TextBlock Text="VAE变分自动编码器同样重要" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="80" Canvas.Top="41"/>
                                 </Canvas>
                             </Border>
                         </StackPanel>
-                        <StackPanel  Orientation="Horizontal" Margin="50,175,0,0" Height="80"  >
-                            <Border x:Name="打开EMB模型文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="13" BorderThickness="1"  Width="400" Height="80" MouseDown="打开EMB模型文件夹_MouseDown">
+                        <StackPanel  Orientation="Horizontal" Canvas.Left="9" Canvas.Top="76"  >
+                            <Border x:Name="打开EMB模型文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="13" BorderThickness="1"  Width="335" Height="70" MouseDown="打开EMB模型文件夹_MouseDown">
                                 <Canvas>
-                                    <TextBlock Text="&#xEC50;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" FontSize="45" Foreground="#FF53E3FF" Canvas.Left="21" Canvas.Top="16"/>
-                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="30" Height="30" FontSize="30" Foreground="#FF53E3FF" Canvas.Left="355" Canvas.Top="26"/>
+                                    <TextBlock Text="&#xEC50;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" FontSize="45" Foreground="#FF53E3FF" Canvas.Left="15" Canvas.Top="12"/>
+                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="30" Height="30" FontSize="30" Foreground="#FF53E3FF" Canvas.Left="290" Canvas.Top="20"/>
 
-                                    <TextBlock Text="打开Embedding模型文件夹" FontSize="18.5" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="80" Canvas.Top="16" Width="271" Height="23"/>
-                                    <TextBlock Text="Embedding模型体积很小，效果也是。" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="80" Canvas.Top="41"/>
+                                    <TextBlock Text="打开Embedding模型文件夹" FontSize="16" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="80" Canvas.Top="16" Width="271" Height="23"/>
+                                    <TextBlock Text="Embedding模型体积很小，效果也是。" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="80" Canvas.Top="41"/>
                                 </Canvas>
                             </Border>
-                            <Border x:Name="打开HYP模型文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="13" BorderThickness="1"  Width="400" Height="80" Margin="20,0,0,0" MouseDown="打开HYP模型文件夹_MouseDown">
+                            <Border x:Name="打开HYP模型文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="13" BorderThickness="1"  Width="335" Height="70" Margin="10,0,0,0" MouseDown="打开HYP模型文件夹_MouseDown">
                                 <Canvas>
-                                    <TextBlock Text="&#xEC50;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" FontSize="45" Foreground="#FFFFC68D" Canvas.Left="21" Canvas.Top="16"/>
-                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="30" Height="30" FontSize="30" Foreground="#FFFFC68D" Canvas.Left="355" Canvas.Top="26"/>
+                                    <TextBlock Text="&#xEC50;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" FontSize="45" Foreground="#FFFFC68D" Canvas.Left="15" Canvas.Top="12"/>
+                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="30" Height="30" FontSize="30" Foreground="#FFFFC68D" Canvas.Left="290" Canvas.Top="20"/>
 
-                                    <TextBlock Text="HyperNetWork模型文件夹" FontSize="18.5" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="82" Canvas.Top="16" Width="262" Height="23"/>
-                                    <TextBlock Text="使用的时候记得在设置里选择它并保存" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="80" Canvas.Top="41"/>
+                                    <TextBlock Text="HyperNetWork模型文件夹" FontSize="16" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="82" Canvas.Top="16" Width="262" Height="23"/>
+                                    <TextBlock Text="使用的时候记得在设置里选择它并保存" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="80" Canvas.Top="41"/>
                                 </Canvas>
                             </Border>
-                            <Border x:Name="打开扩展模型文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="13" BorderThickness="1"  Width="400" Height="80" Margin="20,0,0,0" MouseDown="打开扩展模型文件夹_MouseDown">
+                            <Border x:Name="打开扩展模型文件夹"   Style="{DynamicResource 按钮容器样式}" CornerRadius="13" BorderThickness="1"  Width="335" Height="70" Margin="10,0,0,0" MouseDown="打开扩展模型文件夹_MouseDown">
                                 <Canvas>
-                                    <TextBlock Text="&#xEC50;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" FontSize="45" Foreground="#FF9DD4FF" Canvas.Left="21" Canvas.Top="16"/>
-                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="30" Height="30" FontSize="30" Foreground="#FF9DD4FF" Canvas.Left="355" Canvas.Top="26"/>
+                                    <TextBlock Text="&#xEC50;" FontFamily="Segoe MDL2 Assets" Width="45" Height="45" FontSize="45" Foreground="#FF9DD4FF" Canvas.Left="15" Canvas.Top="12"/>
+                                    <TextBlock Text="&#xE8A7;" FontFamily="Segoe MDL2 Assets" Width="30" Height="30" FontSize="30" Foreground="#FF9DD4FF" Canvas.Left="290" Canvas.Top="20"/>
 
-                                    <TextBlock Text="打开extensions|扩展 文件夹" FontSize="18.5" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="82" Canvas.Top="16" Width="262" Height="23"/>
-                                    <TextBlock Text="WebUI版本似乎经常和扩展版本冲突" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="80" Canvas.Top="41"/>
+                                    <TextBlock Text="打开extensions|扩展 文件夹" FontSize="16" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="73" Canvas.Top="16" Width="262" Height="23"/>
+                                    <TextBlock Text="WebUI版本似乎经常和扩展版本冲突" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD6D6D6" Canvas.Left="80" Canvas.Top="41"/>
                                 </Canvas>
                             </Border>
                         </StackPanel>

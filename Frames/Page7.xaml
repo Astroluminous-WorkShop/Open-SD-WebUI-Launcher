@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AetherLauncher.Frames"
       mc:Ignorable="d" 
-      d:DesignHeight="740" d:DesignWidth="1350"
+      d:DesignHeight="562" d:DesignWidth="1048"
       Title="Page7">
 
     <Grid>
@@ -13,28 +13,26 @@
             <ImageBrush ImageSource="/Frames/lablepng.png" Stretch="UniformToFill"/>
         </Grid.Background>
         <Canvas Background="#33000000" >
-            <Grid Height="740" Width="1350"/>
-            <Image Height="103" Canvas.Left="753" Canvas.Top="386" Width="105" Source="/imagesource/qqchannel.png" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Image Height="103" Canvas.Left="753" Canvas.Top="386" Width="105" Source="/imagesource/qqchannel.png" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Image Height="91" Canvas.Left="189" Canvas.Top="10" Width="96" Source="/imagesource/mainlogo.png" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Image  x:Name="tieba" Height="103" Canvas.Left="753" Canvas.Top="138" Width="105" Source="/imagesource/qqpd (8).png" HorizontalAlignment="Center" MouseDown="tieba_MouseDown" VerticalAlignment="Top"/>
 
         </Canvas>
         <Canvas>
-            <Border CornerRadius="10" BorderThickness="1" Height="708" Width="1320" Canvas.Left="15" Canvas.Top="17" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Border CornerRadius="10" BorderThickness="1" Height="562" Width="1048" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Center">
                 <Image Margin="58,42,1138,558" Source="/imagesource/qqpd (8).png"/>
             </Border>
-            <Border CornerRadius="10" BorderBrush="#FF5BB9F6" BorderThickness="2" Height="708" Width="1320" Canvas.Left="15" Canvas.Top="17" HorizontalAlignment="Left" VerticalAlignment="Center">
-                <Image Margin="725,211,471,389" Source="/imagesource/qqpd (8).png" MouseDown="Image_MouseDown"/>
-            </Border>
 
-            <TextBlock Canvas.Left="199" TextWrapping="Wrap" Text="Windows客户端 BiliBili@Harekaze晴风 （链接）" Canvas.Top="130" Foreground="#FF99E5FF" MouseDown="TextBlock_MouseDown_1" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBlock Canvas.Left="200" TextWrapping="Wrap" Text="联系我们：PhantomAITech@outlook.com" Canvas.Top="106" Foreground="#FFA3E8FF"  FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBlock x:Name="开发组介绍" Canvas.Left="199" TextWrapping="Wrap" Text="Phantom Development Team | 幻灵荣誉开发组" Canvas.Top="68" Foreground="White" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" />
+            <TextBlock Canvas.Left="283" TextWrapping="Wrap" Text="Windows客户端 BiliBili@Harekaze晴风 （链接）" Canvas.Top="68" Foreground="#FF99E5FF" MouseDown="TextBlock_MouseDown_1" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBlock Canvas.Left="283" TextWrapping="Wrap" Text="联系我们：PhantomAITech@outlook.com" Canvas.Top="45" Foreground="#FFA3E8FF"  FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBlock x:Name="开发组介绍" Canvas.Left="283" TextWrapping="Wrap" Text="Phantom Development Team | 幻灵荣誉开发组" Canvas.Top="10" Foreground="White" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" />
             <TextBlock Canvas.Left="749" TextWrapping="Wrap" Text="QQ频道，扫描二维码加入" Canvas.Top="507" Foreground="White" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Width="220" FontWeight="Bold"/>
-            <TextBlock Canvas.Left="749" TextWrapping="Wrap" Text="点击进入  贴吧：幻灵AI绘画盒子吧" Canvas.Top="345" Foreground="White" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Width="283" FontWeight="Bold"/>
-            <TextBlock Canvas.Left="741" TextWrapping="Wrap" Text="BUG反馈与交流" Canvas.Top="187" Foreground="White" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Top" Width="171" FontWeight="Bold"/>
+            <TextBlock Canvas.Left="749" TextWrapping="Wrap" Text="点击进入  贴吧：幻灵AI绘画盒子吧" Canvas.Top="258" Foreground="White" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Width="283" FontWeight="Bold"/>
+            <TextBlock Canvas.Left="749" TextWrapping="Wrap" Text="BUG反馈与交流" Canvas.Top="98" Foreground="White" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Top" Width="171" FontWeight="Bold"/>
             <TextBlock Canvas.Left="196" TextWrapping="Wrap" Text="幻灵AI绘画盒子是一个免费的AI绘画启动器 支持开源AI绘画工具Stable diffusion WebUI
 希望为各位魔导师带来易用好用的AI艺术创作体验
 幻灵AI绘画盒子由幻灵荣誉开发组制作。" Canvas.Top="651" Foreground="White" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Top" Width="907" FontWeight="Bold" Height="64"/>
-            <StackPanel HorizontalAlignment="Center" Canvas.Top="178" VerticalAlignment="Top" Canvas.Left="84" Width="463" Height="538">
+            <StackPanel HorizontalAlignment="Center" Canvas.Top="98" VerticalAlignment="Top" Canvas.Left="61" Width="463" Height="432">
                 <TextBlock Canvas.Left="202" TextWrapping="Wrap" Text="幻灵荣誉开发组成员(按首字母排名) " Canvas.Top="392" Foreground="White" FontSize="22" HorizontalAlignment="Left" Width="452" Margin="0,0,0,15" FontWeight="Bold"/>
                 <TextBlock Canvas.Left="202" TextWrapping="Wrap" Text="Cynika（链接）" Canvas.Top="392" Foreground="#FF44FBFF" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top" Width="220" Margin="0,0,0,10" FontWeight="Bold" MouseDown="TextBlock_MouseDown"/>
                 <TextBlock Canvas.Left="202" TextWrapping="Wrap" Text="独立研究员-星空（链接）" Canvas.Top="392" Foreground="#FF44FBFF" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top" Width="220" Margin="0,0,0,10" FontWeight="Bold" MouseDown="TextBlock_MouseDown_2"/>

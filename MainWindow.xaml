@@ -6,11 +6,10 @@
         xmlns:local="clr-namespace:AetherLauncher"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" x:Class="AetherLauncher.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="790         " Width="1600         " WindowStyle="None"
+        Title="幻灵AI绘画盒子" Height="600" Width="1100" WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
-        Background="{x:Null}" 
-        Foreground="{x:Null}" MinWidth="1600" MinHeight="790" MaxWidth="1600" MaxHeight="790"
+        Background="{x:Null}" MinWidth="1100" MaxWidth="1100" MinHeight="600" MaxHeight="600" 
     
         >
 
@@ -81,96 +80,80 @@
             <ImageBrush Stretch="Uniform" AlignmentX="Left" Opacity="0"/>
 
         </Grid.Background>
-        <Canvas Margin="0,50,0,0" Width="250" HorizontalAlignment="Left" Background="#FF272727" />
 
-        <Canvas x:Name="顶部栏"  Background="#E5000000" Margin="0,0,0,740" MouseLeftButtonDown="顶部栏_MouseLeftButtonDown" MouseRightButtonDown="顶部栏_MouseRightButtonDown">
-            <Border x:Name="最小化按钮" BorderThickness="1" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1494" MouseDown="最小化按钮_MouseDown">
-                <TextBlock TextWrapping="Wrap" Text="&#xE108;" FontFamily="Segoe MDL2 Assets"  Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Canvas x:Name="顶部栏"  Background="#FF2E2E2E" Margin="0,0,0,562" MouseLeftButtonDown="顶部栏_MouseLeftButtonDown" MouseRightButtonDown="顶部栏_MouseRightButtonDown" Height="38">
+            <Image Source="/imagesource/mainlogo.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="35" Height="35" Canvas.Left="8" Canvas.Top="2"/>
+            <Border x:Name="最小化按钮" BorderThickness="1" Height="25" Width="25" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="1014" MouseDown="最小化按钮_MouseDown" Canvas.Top="7">
+                <TextBlock TextWrapping="Wrap" Text="&#xE108;" FontFamily="Segoe MDL2 Assets"  Foreground="White" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
             </Border>
-            <Border x:Name="关闭按钮" BorderThickness="1" Height="50" Width="50" HorizontalAlignment="Left" Canvas.Left="1542" VerticalAlignment="Center" MouseDown="关闭按钮_MouseDown">
+            <Border x:Name="关闭按钮" BorderThickness="1" Height="25" Width="26" HorizontalAlignment="Left" Canvas.Left="1056" VerticalAlignment="Center" MouseDown="关闭按钮_MouseDown" Canvas.Top="7">
                 <TextBlock TextWrapping="Wrap" Text="&#xE10A;" FontFamily="Segoe MDL2 Assets" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Border>
-            <TextBlock Canvas.Left="60" TextWrapping="Wrap" Foreground="White" Text="幻灵AI绘画盒子   公测一期-A0阶段  不代表最终质量           一款专为魔导师和AI艺术家打造的Stable Diffusion WebUI启动器" Canvas.Top="14" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Image Height="37" Canvas.Left="12" Canvas.Top="7" Width="38" Source="/imagesource/qqpd (8).png" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Canvas.Left="50" TextWrapping="Wrap" Foreground="White" Text="幻灵AI绘画盒子  A2             一款专为魔导师和AI艺术家打造的Stable Diffusion WebUI启动器" Canvas.Top="9" HorizontalAlignment="Left" VerticalAlignment="Center" Width="702" FontSize="16"/>
 
 
         </Canvas>
-        <Canvas x:Name="侧边栏" Margin="0,0,0,0" Width="250" HorizontalAlignment="Left" MouseLeftButtonDown="侧边栏_MouseLeftButtonDown" MouseRightButtonDown="侧边栏_MouseRightButtonDown" >
-            <StackPanel  Width="250" VerticalAlignment="Top" HorizontalAlignment="Center" Canvas.Top="340">
-                <Canvas Height="45">
-                    <TextBlock x:Name="工具栏01" Style="{StaticResource 左侧按钮样式}"  Text="幻灵主页" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Canvas.Left="91" Canvas.Top="10"  MouseDown="工具栏01_MouseDown"/>
-                </Canvas>
-                <Canvas Height="45">
-                    <TextBlock x:Name="工具栏02" Style="{StaticResource 左侧按钮样式}"  Text="启动管理中心"  HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Canvas.Left="72" Canvas.Top="10"   MouseDown="工具栏02_MouseDown" Width="139"/>
-                </Canvas>
-                <Canvas Height="45">
-                    <TextBlock x:Name="工具栏03" Style="{StaticResource 左侧按钮样式}" Text="AIGODLIKE社区"  HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Canvas.Left="57" Canvas.Top="10"   MouseDown="工具栏03_MouseDown" Width="159"/>
-                </Canvas>
-                <Canvas Height="45">
-                    <TextBlock x:Name="工具栏04" Style="{StaticResource 左侧按钮样式}"  Text="资源中心"  HorizontalAlignment="Center" VerticalAlignment="Center"
-                               Height="26" Canvas.Left="91" Canvas.Top="9"  MouseDown="工具栏04_MouseDown"/>
-                </Canvas>
-                <Canvas Height="45">
-                    <TextBlock x:Name="工具栏05" Style="{StaticResource 左侧按钮样式}"  Text="工具集合"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Canvas.Left="91" Canvas.Top="10"   MouseDown="工具栏05_MouseDown" Visibility="Hidden"/>
-                </Canvas>
-                <Canvas Height="45" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <TextBlock x:Name="工具栏06" Style="{StaticResource 左侧按钮样式}" TextWrapping="Wrap" Text="关于盒子"  Canvas.Left="91" Canvas.Top="10"  MouseDown="工具栏06_MouseDown" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden"/>
-                </Canvas>
-                <Canvas Height="45" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Canvas Height="70" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Canvas Height="45" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <TextBlock x:Name="工具栏07" Style="{StaticResource 左侧按钮样式}"  Text="关于盒子"  Height="25" Canvas.Left="91" Canvas.Top="10"  HorizontalAlignment="Center" VerticalAlignment="Center" MouseDown="工具栏07_MouseDown"/>
+        <Canvas x:Name="侧边栏" Width="52" HorizontalAlignment="Left"  MouseLeftButtonDown="顶部栏_MouseLeftButtonDown" MouseRightButtonDown="顶部栏_MouseRightButtonDown" Background="#FF2E2E2E" Margin="0,38,0,0" >
 
-                </Canvas>
+            <StackPanel  Width="50" VerticalAlignment="Center" HorizontalAlignment="Left" Canvas.Top="200">
 
-            </StackPanel>
-            <StackPanel  Width="250" VerticalAlignment="Top" HorizontalAlignment="Center" Canvas.Top="340">
-
-                <Canvas x:Name="工具栏11" Height="45" Width="246" HorizontalAlignment="Left" Canvas.Top="320" >
-                    <Border Style="{StaticResource 按钮选择样式}" />
+                <Canvas x:Name="工具栏11" HorizontalAlignment="Left" Canvas.Top="320" Height="45" >
+                    <Border Style="{StaticResource 按钮选择样式}" Canvas.Left="3" Width="45" HorizontalAlignment="Center" />
 
                 </Canvas>
                 <Canvas x:Name="工具栏12" Height="45" Width="246" HorizontalAlignment="Left" Canvas.Top="320" Visibility="Hidden" >
-                    <Border Style="{StaticResource 按钮选择样式}" />
+                    <Border Style="{StaticResource 按钮选择样式}" Canvas.Left="3" Width="45" HorizontalAlignment="Center"  />
 
                 </Canvas>
                 <Canvas x:Name="工具栏13" Height="45" Width="246" HorizontalAlignment="Left" Canvas.Top="320" Visibility="Hidden" >
-                    <Border Style="{StaticResource 按钮选择样式}" />
+                    <Border Style="{StaticResource 按钮选择样式}" Canvas.Left="3" Width="45" HorizontalAlignment="Center"/>
 
                 </Canvas>
                 <Canvas x:Name="工具栏14" Height="45" Width="246" HorizontalAlignment="Left" Canvas.Top="320" Visibility="Hidden" >
-                    <Border Style="{StaticResource 按钮选择样式}" />
+                    <Border Style="{StaticResource 按钮选择样式}" Canvas.Left="3" Width="45" HorizontalAlignment="Center"/>
 
                 </Canvas>
                 <Canvas x:Name="工具栏15" Height="45" Width="246" HorizontalAlignment="Left" Canvas.Top="320" Visibility="Hidden" >
-                    <Border Style="{StaticResource 按钮选择样式}" />
+                    <Border Style="{StaticResource 按钮选择样式}" Canvas.Left="3" Width="45" HorizontalAlignment="Center"/>
 
                 </Canvas>
                 <Canvas x:Name="工具栏16" Height="45" Width="246" HorizontalAlignment="Left" Canvas.Top="320" Visibility="Hidden" >
-                    <Border Style="{StaticResource 按钮选择样式}" />
+                    <Border Style="{StaticResource 按钮选择样式}" Canvas.Left="3" Width="45" HorizontalAlignment="Center"/>
 
                 </Canvas>
-                <Canvas Height="45" Width="246" HorizontalAlignment="Left" Canvas.Top="320" Visibility="Hidden" />
-                <Canvas Height="70" Width="246" HorizontalAlignment="Left" Canvas.Top="320" Visibility="Hidden" />
+
 
                 <Canvas x:Name="工具栏17" Height="45" Width="246" HorizontalAlignment="Left" Canvas.Top="320" Visibility="Hidden" >
-                    <Border CornerRadius="10" BorderThickness="1" Height="45" Width="243" Background="#3FFFFFFF" BorderBrush="#3FFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="3"/>
+                    <Border Style="{StaticResource 按钮选择样式}" CornerRadius="10" BorderThickness="1" Height="45" Width="45"  />
 
                 </Canvas>
 
             </StackPanel>
-            <StackPanel Width="45"  Canvas.Top="340" Canvas.Left="10">
-                <Border BorderThickness="1" Height="45" Width="45">
-                    <TextBlock TextWrapping="Wrap" Text="&#xE10F;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+            <StackPanel Width="45"  Canvas.Top="200" Canvas.Left="3">
+                <Border BorderThickness="1" Height="45" Width="45"  MouseDown="工具栏01_MouseDown">
+                    <StackPanel>
+                        <TextBlock TextWrapping="Wrap" Text="&#xE10F;" FontFamily="Segoe MDL2 Assets" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                        <TextBlock  Text="主页"  HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                    </StackPanel>
                 </Border>
-                <Border BorderThickness="1" Height="45" Width="45">
-                    <TextBlock TextWrapping="Wrap" Text="&#xE9E9;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                <Border BorderThickness="1" Height="45" Width="45"   MouseDown="工具栏02_MouseDown" Margin="0,5,0,0" >
+                    <StackPanel>
+                        <TextBlock TextWrapping="Wrap" Text="&#xE9E9;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                        <TextBlock  Text="启动"  HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                    </StackPanel>
                 </Border>
-                <Border BorderThickness="1" Height="45" Width="45">
-                    <TextBlock TextWrapping="Wrap" Text="&#xE902;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                <Border BorderThickness="1" Height="45" Width="45"   MouseDown="工具栏03_MouseDown">
+                    <StackPanel>
+                        <TextBlock TextWrapping="Wrap" Text="&#xE902;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                        <TextBlock  Text="社区"  HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                    </StackPanel>
                 </Border>
-                <Border BorderThickness="1" Height="45" Width="45">
-                    <TextBlock TextWrapping="Wrap" Text="&#xEB50;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                <Border BorderThickness="1" Height="45" Width="45"   MouseDown="工具栏04_MouseDown">
+                    <StackPanel>
+                        <TextBlock TextWrapping="Wrap" Text="&#xEB50;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                        <TextBlock  Text="资源"  HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                    </StackPanel>
                 </Border>
                 <Border BorderThickness="1" Height="45" Width="45">
                     <TextBlock TextWrapping="Wrap" Text="&#xE15E;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Visibility="Hidden"/>
@@ -178,46 +161,46 @@
                 <Border BorderThickness="1" Height="45" Width="45">
                     <TextBlock TextWrapping="Wrap" Text="&#xE946;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Visibility="Hidden"/>
                 </Border>
-                <Border BorderThickness="1" Height="45" Width="45"/>
-                <Border BorderThickness="1" Height="70" Width="45"/>
-                <Border BorderThickness="1" Height="45" Width="45">
-                    <TextBlock TextWrapping="Wrap" Text="&#xE946;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+
+                <Border  BorderThickness="1" Height="45" Width="45"   MouseDown="工具栏07_MouseDown">
+                    <StackPanel>
+                        <TextBlock TextWrapping="Wrap" Text="&#xE946;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                        <TextBlock  Text="关于"  HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                    </StackPanel>
                 </Border>
 
             </StackPanel>
 
-            <Image Height="125" Canvas.Left="65" Canvas.Top="116" Width="126" Source="/imagesource/mainlogo.png"/>
+
         </Canvas>
-        <Canvas Margin="250,50,0,0" Background="#FF191919" >
-            <TextBlock Canvas.Left="538" TextWrapping="Wrap" Foreground="#00000000" Text="加载中...." Canvas.Top="350" FontSize="38"/>
-        </Canvas>
-        <ContentControl x:Name="MainPage"  Margin="250,50,0,0"/>
+        <Canvas Background="#FF1F1F1F" Margin="52,38,0,0"></Canvas>
+
+        <ContentControl x:Name="MainPage"  Margin="52,38,0,0" Background="White"/>
 
         <!--这里是最后的指导画面，让用户选择一个工作目录-->
-        <Canvas x:Name="引导之路径选择页面" Background="#FF272727" Margin="0,50,0,0" Visibility="Hidden">
+        <Canvas x:Name="引导之路径选择页面" Background="#FF272727" Margin="0,38,0,0" Visibility="Hidden">
 
-            <TextBlock Foreground="White" HorizontalAlignment="Left" TextWrapping="Wrap" Text="请选择WebUI的工作目录" VerticalAlignment="Center" FontSize="72" Canvas.Left="383" Canvas.Top="130" Width="847" Height="111"/>
-            <TextBlock Foreground="White" HorizontalAlignment="Left" TextWrapping="Wrap" Text="选择您已安装好的WebUI或相关整合包的安装文件夹" VerticalAlignment="Center" FontSize="36" Canvas.Left="384" Canvas.Top="319" Width="844"/>
-            <Border HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="0" Canvas.Top="486" Width="1600">
-                <TextBlock x:Name="启动路径展示" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontSize="28" Canvas.Left="287" Canvas.Top="556"/>
-
-            </Border>
-            <Border x:Name="路径选择按钮" Style="{DynamicResource 按钮资源样式}" BorderThickness="2"  CornerRadius="10" Width="500" Height="80" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="554" Canvas.Top="382" MouseDown="路径选择按钮_MouseDown" >
-                <TextBlock TextWrapping="Wrap" Foreground="White"  Text="选择工作目录" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Foreground="White" HorizontalAlignment="Left" TextWrapping="Wrap" Text="请选择WebUI的工作目录" VerticalAlignment="Top" FontSize="72" Canvas.Left="143" Canvas.Top="106" Width="847" Height="111"/>
+            <TextBlock Foreground="White" HorizontalAlignment="Left" TextWrapping="Wrap" Text="选择您已安装好的WebUI或相关整合包的安装文件夹" VerticalAlignment="Top" FontSize="36" Canvas.Left="153" Canvas.Top="208" Width="844"/>
+            <Border HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="0" Canvas.Top="372" Width="1100">
+                <TextBlock x:Name="启动路径展示" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontSize="20" Canvas.Left="287" Canvas.Top="556"/>
 
             </Border>
-            <Border x:Name="完成路径选则按钮" Style="{DynamicResource 按钮资源样式}" BorderThickness="2"  CornerRadius="10" Width="500" Height="80" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="554" Canvas.Top="572" MouseDown="完成路径选则按钮_MouseDown" Visibility="Hidden" >
-                <TextBlock TextWrapping="Wrap" Foreground="White"  Text="完成" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Border x:Name="路径选择按钮" Style="{DynamicResource 按钮资源样式}" BorderThickness="2"  CornerRadius="10" Width="300" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="400" Canvas.Top="275" MouseDown="路径选择按钮_MouseDown" >
+                <TextBlock TextWrapping="Wrap" Foreground="White"  Text="选择工作目录" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            </Border>
+            <Border x:Name="完成路径选则按钮" Style="{DynamicResource 按钮资源样式}" BorderThickness="2"  CornerRadius="10" Width="300" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="400" Canvas.Top="462" MouseDown="完成路径选则按钮_MouseDown" Visibility="Hidden" >
+                <TextBlock TextWrapping="Wrap" Foreground="White"  Text="完成" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             </Border>
 
 
         </Canvas>
-
-        <Canvas x:Name="用户协议" Margin="0,50,0,0" Background="#FF272727" Visibility="Hidden">
-            <TextBlock TextWrapping="Wrap" Foreground="White"  Text="幻灵AI绘画盒子用户协议" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="558" Canvas.Top="58" Width="432"/>
-            <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Height="520" Canvas.Left="190" Canvas.Top="106" HorizontalAlignment="Left" VerticalAlignment="Center" Width="1192">
-                <TextBlock Foreground="White" xml:space="preserve" FontSize="24">
+        <Canvas x:Name="用户协议" Margin="0,38,0,0" Background="#FF272727" Visibility="Hidden">
+            <TextBlock TextWrapping="Wrap" Foreground="White"  Text="幻灵AI绘画盒子用户协议" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="313" Canvas.Top="23" Width="432"/>
+            <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Height="327" Canvas.Left="-11" Canvas.Top="73" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1109">
+                <TextBlock Foreground="White" xml:space="preserve" FontSize="18" Width="916">
 1.简介
    幻灵AI绘画盒子是一个免费的开源AI绘画启动器，支持开源AI绘画工具Stable diffusion WebUI。
 希望为各位魔导师与萌新带来易用好用的AI艺术创作体验
@@ -350,12 +333,12 @@
 
                 </TextBlock>
             </ScrollViewer>
-            <Border x:Name="同意协议按钮" Style="{DynamicResource 按钮资源样式}" BorderThickness="2"  CornerRadius="10" Width="300" Height="70" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="796" Canvas.Top="641" MouseDown="同意协议按钮_MouseDown" >
-                <TextBlock TextWrapping="Wrap" Foreground="White"  Text="同意用户协议" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Border x:Name="同意协议按钮" Style="{DynamicResource 按钮资源样式}" BorderThickness="2"  CornerRadius="10" Width="300" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="556" Canvas.Top="450" MouseDown="同意协议按钮_MouseDown" >
+                <TextBlock TextWrapping="Wrap" Foreground="White"  Text="同意用户协议" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             </Border>
-            <Border x:Name="不同意协议按钮" Style="{DynamicResource 按钮资源样式}" BorderThickness="2"  CornerRadius="10" Width="300" Height="70" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="459" Canvas.Top="641" MouseDown="不同意协议按钮_MouseDown" >
-                <TextBlock TextWrapping="Wrap" Foreground="#FFFF8080"  Text="拒绝用户协议" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Border x:Name="不同意协议按钮" Style="{DynamicResource 按钮资源样式}" BorderThickness="2"  CornerRadius="10" Width="300" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="219" Canvas.Top="450" MouseDown="不同意协议按钮_MouseDown" >
+                <TextBlock TextWrapping="Wrap" Foreground="#FFFF8080"  Text="拒绝用户协议" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             </Border>
 

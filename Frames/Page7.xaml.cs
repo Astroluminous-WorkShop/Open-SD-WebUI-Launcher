@@ -35,11 +35,6 @@ namespace AetherLauncher.Frames
 
         }
 
-        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            Process.Start(new ProcessStartInfo("https://tieba.baidu.com/f?ie=utf-8&kw=%E5%B9%BB%E7%81%B5AI%E7%BB%98%E7%94%BB%E7%9B%92%E5%AD%90&fr=search") { UseShellExecute = true });
-
-        }
 
         private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -104,6 +99,12 @@ namespace AetherLauncher.Frames
         private void TextBlock_MouseDown_12(object sender, MouseButtonEventArgs e)
         {
             Process.Start(new ProcessStartInfo("https://space.bilibili.com/35723238") { UseShellExecute = true });
+
+        }
+
+        private void tieba_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://tieba.baidu.com/f?ie=utf-8&kw=%E5%B9%BB%E7%81%B5AI%E7%BB%98%E7%94%BB%E7%9B%92%E5%AD%90&fr=search") { UseShellExecute = true });
 
         }
     }

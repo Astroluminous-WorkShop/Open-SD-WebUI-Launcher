@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:AetherLauncher.Frames"
       mc:Ignorable="d" 
             xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
-      d:DesignHeight="740" d:DesignWidth="1350"
+      d:DesignHeight="562" d:DesignWidth="1048"
       Title="Page3">
 
     <Grid>

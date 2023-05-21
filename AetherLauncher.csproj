@@ -102,9 +102,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="1.jpeg" />
-    <Resource Include="2.jpeg" />
-    <Resource Include="3.jpeg" />
     <Resource Include="Frames\00013-1522904382-2D,eve,((girl___.png" />
     <Resource Include="Frames\00015-4260796270-2D,eve,((girl___.png" />
     <Resource Include="Frames\00016-194355631-2D,eve,((girl)___.png" />
@@ -116,7 +113,6 @@
     <Resource Include="Frames\background.png" />
     <Resource Include="Frames\engine\00014-2911463248-2D,eve,((girl___.png" />
     <Resource Include="Frames\engine\00015-4260796270-2D,eve,((girl___.png" />
-    <Resource Include="Frames\engine\00029-3696383919-CG,2D,eve,((girl)),masterpiece,highres,extremely detailed,best quality,clouds,blue sky,whiethair,1girl,(((sunlight))),blur, (((c.png" />
     <Resource Include="Frames\engine\00035-1749828914-CG,2D,eve,((g___.png" />
     <Resource Include="Frames\engine\00068-2859389514-CG,2D,eve,((g___.png" />
     <Resource Include="Frames\engine\00069-3167378741-CG,2D,eve,((g___.png" />

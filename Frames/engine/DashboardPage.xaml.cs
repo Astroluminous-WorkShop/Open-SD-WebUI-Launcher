@@ -93,13 +93,21 @@ namespace AetherLauncher.Frames.engine
 
 };
 
-            //viewModel.ABC = "qid"+"ABC";
+
             string filePath = @"C:\aetherlaunther\startpath.txt";
 
             // 如果文件存在，读取其中的内容到startpath全局变量中
             if (File.Exists(filePath))
             {
                 工作路径展示.Text = File.ReadAllText(filePath);
+            } 
+     
+            string filePath3 = @"C:\aetherlaunther\pythonpath.txt";
+
+            // 如果文件存在，读取其中的内容到startpath全局变量中
+            if (File.Exists(filePath3))
+            {
+                Python路径展示.Text = File.ReadAllText(filePath);
             }
             string filePath2 = @"C:\aetherlaunther\commands.txt";
             if (File.Exists(filePath2))
@@ -235,7 +243,7 @@ namespace AetherLauncher.Frames.engine
             //下面开始施法！！！！
             Process 启动魔法 = new Process();
             ProcessStartInfo startinfo = new ProcessStartInfo();
-            startinfo.FileName =启动路径+ @"\VENV_DIR\Scripts\python.exe"/*pythonPath*/;
+            startinfo.FileName =pythonPath+"python.exe"/*pythonPath*/;
             startinfo.Arguments = /*"-noexit -c"  + " " +*/ 启动文件 + " " + 启动术式 + 命令列表;
             startinfo.Verb = "r";
             startinfo.EnvironmentVariables["git"] = Environment.GetEnvironmentVariable("git");
@@ -285,6 +293,12 @@ namespace AetherLauncher.Frames.engine
         private void Gradio账号管理_MouseDown(object sender, MouseButtonEventArgs e)
         {
 
+        }
+
+        private void 管理Python路径_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            选择Python所在文件夹();
+            Python路径展示.Text = pythonPath;
         }
     }
 }
