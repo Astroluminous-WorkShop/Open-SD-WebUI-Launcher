@@ -1,6 +1,6 @@
 #绘梦启动器3.1.0更新
 下载链接
-https://github.com/Astro-Artistry-Dev-Team/Open-SD-WebUI-Launcher/releases/download/3.1.0/3.1.0.zip
+https://github.com/Astro-Artistry-Dev-Team/Open-SD-WebUI-Launcher/releases/
 感谢https://github.com/fallingmeteorite的贡献
 正式支持第三方整合包资源配置
 修复若干bug
